@@ -22,13 +22,6 @@
     --fonte-principal:"Bebas Neue", sans-serif;
 }
 
-header{
-    background-image: linear-gradient(to bottom, var(--cor-clara), var(--cor-escura));
-    padding: 5px;
-    color: white;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.288);
-}
-
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--cor-de-fundo);
@@ -36,37 +29,49 @@ body{
     font-size: 13px;
 }
 
-main{
-    background-color: white;
-    margin: auto;
+/*cabeçalho*/
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor-clara), var(--cor-escura));
+    padding: 5px;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.288);
     
-    max-width: 800px;
-    min-width: 320px;
-    padding: 15px;
 }
 
 header > h1, p{
     text-align: center;
+    margin: 20px;
 }
 
 header > h1{
     font-family: var(--fonte-principal); 
     font-weight:100;
+    font-size: 3em;
 }
+header > p{
+     
+    font-weight:100;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+/*navegação*/
 
 header> nav > ul > li> a{
     color: white;
     text-decoration: none;
     border-radius: 10px;
     text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.307);
+    padding: 10px;
+    transition-duration: 0.5s;
     
 }
-
 
 header> nav > ul > li> a:hover{
     color:var(--cor-yellow);
     background-color: var(--cor-escura);
-    padding: 10px;
+     
 }
 
 #links > li{
@@ -74,34 +79,78 @@ header> nav > ul > li> a:hover{
     padding: 10px;
     text-decoration: none;
     font-weight: bold;
+}
+
+#links{
+   
+    min-width: 200;
     
+}
+
+nav{
+    display: flex;
+}
+
+/*corpo*/
+
+
+main{
+    background-color: white;
+    margin: auto;
+    max-width: 800px;
+    min-width: 320px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.425);
+}
+
+main p{
+    text-align:justify ;
+    margin: 15px 10px;
+    text-indent: 30px;
+    font-size: 1.1em;
+    line-height: 2.1em;
 }
 
 section > h1, h2{
     font-family: var(--font-android);
     color:var(--cor-escura);
     text-align: left;
-    background-color: var(--cor-de-fundo);
+    background-image: linear-gradient(to right, var(--cor-de-fundo), transparent);
 }
 
 
 img{
     width: 100%;
-    
 }
 
- aside > iframe{
-    width: 100%;
-    
-    
+ #hold{
+    max-width: 300px;
+    display: flex;
+    margin: auto;
  }
 
- #final {
+ .video{
+    background-color: #005a30;
+    padding: 20px;
+    margin: 0px -15px;
+ }
+
+ iframe{
+    max-width: 560px;
+    max-height: 315px;
+    width: 100%;
+    margin: auto;
+    display: block; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.255);
+ }
+
+ /*conteudo extra*/
+
+ #curiosidades {
     background-color:var(--cor-de-fundo);
     border-radius: 10px;
-    margin: 0%;
     padding: 0px 0px 10px 0px;
-   
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.281);
  }
 
  h3{
@@ -130,7 +179,6 @@ img{
 
  main > section> article> p  a:hover{
     background-color:var(--cor-de-fundo);
-
  }
 
  #listaf{
@@ -143,7 +191,6 @@ img{
 #listaf{
         columns: 1;
         }
-
  }
 
  #links {
@@ -151,23 +198,35 @@ img{
     -webkit-columns: 4;
  }
 
- @media(max-width:480px){
+ @media(max-width:620px){
     #links{
         columns: 1;
         padding: 30px;
         margin: 30px;
         text-align: center;
-        font-size: 25px;
-        
+        font-size: 25px; 
+    } 
+    nav{
+        display: block;
     }
-       
  }
+
+/*rodapé*/
+
 
  footer{
     background-color: var(--cor-escura);
     color: white;
     padding: 10px;
-    text-align: center;
-        
+    text-align: center;        
 }
 
+footer  a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: var(--cor-clara);
+    text-decoration: underline;
+}
